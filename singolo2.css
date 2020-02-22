@@ -142,11 +142,13 @@ body {
 
 .agent-description {
     font-size: 12px;
-    line-height: 21.56px;
+    line-height: 22px;
     color: #767e9e;
     padding-bottom: 12px;
     font-family: "Lato light";
     text-align: justify;
+    letter-spacing:10%;
+    word-wrap: break-word;
 }
 
 .social {
