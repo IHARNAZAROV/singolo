@@ -206,3 +206,51 @@ body {
     color: #767e9e;
     font-family: "Lato light";
 }
+.service-cards {
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    column-gap: 20px;
+    row-gap: 20px;
+    padding-top: 47px;
+}
+
+.service-card {
+    padding-left: 80px;
+    height: 103px;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card-title {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 7px;
+    font-family: "Lato Black";
+}
+
+.service-card-description {
+    font-size: 12px;
+    line-height: 21.56px;
+    color: #767e9e;
+    text-align: justify;
+    font-family: "Lato light";
+}
+
+.service-card-image-border {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 59px;
+    height: 59px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid #666D89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
