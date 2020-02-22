@@ -102,3 +102,79 @@ body {
     top: -2px;
     color: #494e62;
 }
+.phone {
+    background-repeat: no-repeat;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.iphone1 {
+    background-image: url("./assets/img/iphone1.png");
+    width: 240px;
+    height: 483px;
+}
+
+.iphone2 {
+    background-image: url("./assets/img/iphone2.png");
+    width: 483px;
+    height: 240px;
+}
+
+.phone .iphone-display {
+    position: absolute;
+}
+
+.iphone1 .iphone-display {
+    left: 14px;
+    top: 65px;
+}
+
+.iphone2 .iphone-display {
+    left: 60px;
+    top: 13px;
+}
+
+.slider {
+    background-color: #f06c64;
+    box-sizing: border-box;
+    border-bottom: 6px solid #ea676b;
+    position: relative;
+}
+
+.slider-phone-left {
+    position: relative;
+    left: -6px;
+}
+
+.slider-phone-right {
+    position: relative;
+    left: 5px;
+}
+
+.slider .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 53px;
+    padding-bottom: 58px;
+}
+
+.slider-arrow {
+    width: 16px;
+    height: 27px;
+    background: url("./assets/img/arrowleft.svg") no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.slider-arrow:hover {
+    opacity: 0.8;
+}
+
+.arrow-right {
+    transform: rotate(180deg);
+}
+.hideh1 {
+    position: absolute;
+}
