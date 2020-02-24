@@ -137,6 +137,7 @@ textarea::placeholder {
     text-align: justify;
     color: #f0d8d9;
     font-weight: 400;
+    font-family: "Lato light";
 }
 
 .contact-title ul {
@@ -213,7 +214,7 @@ footer {
     align-items: center;
     border: 1px solid #666d89;
     border-radius: 50%;
-    transition: opacity 250ms ease-in-out;
+    transition: opacity 350ms ease-in-out;
 }
 
 .social-item:not(:last-child) {
@@ -223,4 +224,5 @@ footer {
 .social-item:hover {
     cursor: pointer;
     opacity: 0.5;
+    border: 1px solid yellowgreen;
 }
