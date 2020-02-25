@@ -512,12 +512,12 @@ input[type="submit"] {
 input[type="submit"]:hover {
     cursor: pointer;
     background-color: #e87878;
-
 }
 
 form textarea {
     padding-right: 2px;
     resize: none;
+    margin-top: 3px;
 }
 
 .quote-form {
@@ -639,4 +639,5 @@ footer {
     font-size: 12px;
     margin-left: 0.1875rem;
     margin-bottom: 0.7rem;
+    font-family: "lato light";
 }
