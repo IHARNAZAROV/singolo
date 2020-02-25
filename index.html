@@ -229,23 +229,12 @@
                     tortor mauris condimentum nibh.
                 </p>
                 <div class="quote-field">
-                    <form id="quote-form" action="" method="GET">
-                        <label for="name">
-                            <input type="text" id="name" name="name" form="form" pattern="[a-zA-Z]+"
-                                minlength="4" maxlength="10" placeholder="Name (Required)" required>
-                        </label>
-                        <label for="email">
-                            <input type="email" id="email" name="email" form="form"
-                                placeholder="Email (Required)" required>
-                        </label>
-                        <label for="subject">
-                            <input type="text" id="subject" name="subject" form="form" placeholder="Subject">
-                        </label>
-                        <label class="message" for="message">
-                            <textarea type="text" id="message" name="message" form="form"
-                                placeholder="Describe your project in detail..."></textarea>
-                        </label>
-                    </form>
+                    <form class="quote-form">
+                        <p><input type="text" name="name" pattern="^[ A-Za-z]{3,}" placeholder="Name(Required)" required /></p>
+                        <p><input type="email" name="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Email(Required)" required /></p>
+                        <p><input type="text" name="subject" placeholder="Subject"></p>
+                        <textarea rows="13" name="descritrion" placeholder="Describe your project in detail..."></textarea>
+                     </form>
                     <div class="contact-title">
                         <h3>Contact Information</h3>
                         <p class="contact-description">
