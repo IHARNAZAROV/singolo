@@ -550,9 +550,9 @@ form textarea {
 
 .contact-description {
     width: 18.75rem;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 21.7px;
-    letter-spacing: -0.27px;
+    letter-spacing: -0.48px;
     text-align: justify;
     color: #f0d8d9;
     font-weight: 400;
@@ -650,4 +650,5 @@ footer {
     margin-left: 0.1875rem;
     margin-bottom: 0.7rem;
     font-family: "lato light";
+    letter-spacing: -0.1px;
 }
