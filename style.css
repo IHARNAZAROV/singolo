@@ -320,7 +320,6 @@ body {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 220px);
-    grid-template-rows: repeat(3, auto);
     overflow: hidden;
     column-gap: 20px;
     row-gap: 17px;
