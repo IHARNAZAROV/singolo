@@ -514,11 +514,19 @@ input[type="submit"] {
     padding-left: 0;
     font-family: "Lato Bold";
     outline: none;
+    border: 2px solid #d6b87c;
+    border-radius: 5px;
+    transform: scale(0.9);
+    transition: 0.2s;
+    background-color: #3f4249;
+    color: #d6b87c;
 }
 
 input[type="submit"]:hover {
     cursor: pointer;
-    background-color: #e87878;
+
+    transform: scale(1);
+    transition: 0.2s;
 }
 
 form textarea {
