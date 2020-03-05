@@ -524,7 +524,6 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     cursor: pointer;
-
     transform: scale(1);
     transition: 0.2s;
 }
