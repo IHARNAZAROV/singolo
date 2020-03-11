@@ -32,7 +32,7 @@ body {
     padding: 0 40px;
     margin: 0 auto;
     box-sizing: border-box;
-    
+
 }
 
 .header {
@@ -40,7 +40,10 @@ body {
     height: 5.9375rem;
     box-sizing: border-box;
     border-bottom: 0.375rem solid #323746;
- 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
 }
 
 .header .wrapper {
@@ -48,7 +51,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 .logo {
@@ -194,6 +196,13 @@ body {
     text-align: justify;
     padding-bottom: 3rem;
 
+}
+
+#portfolio,
+#services,
+#about,
+#contact {
+    scroll-margin-top: 2.5rem;
 }
 
 .services-title {
@@ -654,8 +663,9 @@ footer {
     font-family: "lato light";
     letter-spacing: -0.1px;
 }
+
 .sticky {
     position: fixed;
     top: 0;
     width: 100%
-  }
+}
