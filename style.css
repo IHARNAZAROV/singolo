@@ -32,6 +32,7 @@ body {
     padding: 0 40px;
     margin: 0 auto;
     box-sizing: border-box;
+    
 }
 
 .header {
@@ -39,6 +40,7 @@ body {
     height: 5.9375rem;
     box-sizing: border-box;
     border-bottom: 0.375rem solid #323746;
+ 
 }
 
 .header .wrapper {
@@ -46,6 +48,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .logo {
@@ -651,3 +654,8 @@ footer {
     font-family: "lato light";
     letter-spacing: -0.1px;
 }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
