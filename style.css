@@ -331,6 +331,11 @@ body {
     color: #ffffff;
 }
 
+.portfolio-buttons-active {
+    color: #d6b87c;
+    border: 1px solid #f06c64;
+}
+
 .portfolio-work {
     padding: 0;
     list-style: none;
