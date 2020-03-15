@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,95 +8,108 @@
     <link rel="shortcut icon" type="image/png" href="./assets/favicon-32x32.png" />
     <title>Singolo</title>
 </head>
-<body>
 
+<body>
+    <div id="home"></div>
     <header class="header">
         <div class="wrapper">
             <a class="header-logo logo" href="">Singolo</a>
-            <nav>
-                <ul class="header-navigation">
-                    <li class="navigation-item"><a href="#">Home</a></li>
-                    <li class="navigation-item"><a href="#">Services</a></li>
-                    <li class="navigation-item"><a href="#">Portfolio</a></li>
-                    <li class="navigation-item"><a href="#">About</a></li>
-                    <li class="navigation-item"><a href="#">Contact</a></li>
+
+            <nav class="page-header_navigation">
+                <ul id="header-navigation" class="header-navigation">
+                    <li class="navigation-item"><a class="navigation-link navigation-link-active" href="#home">Home</a>
+                    </li>
+                    <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#portfolio">Portfolio</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#about">About</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main class="main-section">
-        <h1 class="hideh1">Singolo Part1</h1>
-        <section class="slider">
+        <section class="slider slider-first">
             <div class="wrapper">
                 <button type="button" class="slider-arrow arrow-left"></button>
-                <div class="slider-phone-left phone iphone1">
-                    <img class="iphone-display" src="./assets/img/iphone1-display.png" alt="IPhone1">
+                <div class="slide slide-active">
+                    <div class="slider-phone-left phone iphone1">
+                        <img class="iphone-display" src="./assets/img/iphone1-display.png" alt="IPhone1">
+                    </div>
+                    <div class="slider-phone-right phone iphone2">
+                        <img class="iphone-display" src="./assets/img/iphone2-display.png" alt="IPhone2">
+                    </div>
                 </div>
-                <div class="slider-phone-right phone iphone2">
-                    <img class="iphone-display" src="./assets/img/iphone2-display.png" alt="IPhone2">
+                <div class="slide">
+                    <img class="slider-iphone3 phone" src="./assets/img/second_slide.svg" alt="IPhone3">
                 </div>
                 <button type="button" class="slider-arrow arrow-right"></button>
             </div>
         </section>
-        <section class="services">
+        <section id="services" class="services">
             <div class="wrapper">
                 <h2 class="services-title">Our Services</h2>
                 <p class="services-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                     mollis, non commodo luctus, nici erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
                     dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
-            <ul class="service-cards">
-                <li class="service-card">
-                    <div class="service-card-image-border">
-                        <img class="service-card-image" width="32" height="32" src="./assets/img/customdesign.svg" alt="Service1">
-                    </div>
+                <ul class="service-cards">
+                    <li class="service-card">
+                        <div class="service-card-image-border">
+                            <img class="service-card-image" width="32" height="32" src="./assets/img/customdesign.svg"
+                                alt="Service1">
+                        </div>
                         <span class="service-card-title">Custom Design</span>
                         <span class="service-card-description">Curabitur vestibulum eget mauris quis laoreet. Phasellus
-                        in quam laoreet, viverra lacus ut, ultrices velit.</span>
-                </li>
-                <li class="service-card">
-                    <div class="service-card-image-border">
-                        <img class="service-card-image" width="22" height="32" src="./assets/img/innovativeideas.svg" alt="Service2">
-                    </div>
+                            in quam laoreet, viverra lacus ut, ultrices velit.</span>
+                    </li>
+                    <li class="service-card">
+                        <div class="service-card-image-border">
+                            <img class="service-card-image" width="22" height="32"
+                                src="./assets/img/innovativeideas.svg" alt="Service2">
+                        </div>
                         <span class="service-card-title">Inovative Ideas</span>
                         <span class="service-card-description">Quisque luctus, quam eget molestie commodo, lacus purus
-                        cursus purus, nec rutrum tellus dolor id lorem.</span>
-                </li>
-                <li class="service-card">
-                    <div class="service-card-image-border"> 
-                        <img class="service-card-image" width="32" height="28" src="./assets/img/loveistheanswer.svg" alt="Service3">
-                    </div> 
+                            cursus purus, nec rutrum tellus dolor id lorem.</span>
+                    </li>
+                    <li class="service-card">
+                        <div class="service-card-image-border">
+                            <img class="service-card-image" width="32" height="28"
+                                src="./assets/img/loveistheanswer.svg" alt="Service3">
+                        </div>
                         <span class="service-card-title">Love Is The Answer</span>
                         <span class="service-card-description">Nulla sed nunc et tortor luctus faucibus. Morbi at
-                        aliquet turpis, et consequat felis. Quisque condimentum.</span>
-                </li>
-                <li class="service-card">
-                    <div class="service-card-image-border">
-                        <img class="service-card-image" width="22" height="32" src="./assets/img/responsivelayout.svg" alt="Service4">
-                    </div>
+                            aliquet turpis, et consequat felis. Quisque condimentum.</span>
+                    </li>
+                    <li class="service-card">
+                        <div class="service-card-image-border">
+                            <img class="service-card-image" width="22" height="32"
+                                src="./assets/img/responsivelayout.svg" alt="Service4">
+                        </div>
                         <span class="service-card-title">Responsive Layout</span>
                         <span class="service-card-description">Sed porttitor placerat rhoncus. In at nunc tellus.
-                        Maecenas blandit nunc ligula. Praecent elit leo.</span>
-                </li>
-                <li class="service-card">
-                    <div class="service-card-image-border">
-                        <img class="service-card-image" width="32" height="28" src="./assets/img/247support.svg" alt="Service5"> 
-                    </div>
+                            Maecenas blandit nunc ligula. Praecent elit leo.</span>
+                    </li>
+                    <li class="service-card">
+                        <div class="service-card-image-border">
+                            <img class="service-card-image" width="32" height="28" src="./assets/img/247support.svg"
+                                alt="Service5">
+                        </div>
                         <span class="service-card-title">24 / 7 Support</span>
                         <span class="service-card-description">Vivamus vel quam lacinia, tincidunt dui non, vehicula
-                        nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</span>
-                </li>
-                <li class="service-card">
-                    <div class="service-card-image-border"> 
-                        <img class="service-card-image" width="32" height="31" src="./assets/img/feellikeastar.svg" alt="Service6"> 
-                    </div>
+                            nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</span>
+                    </li>
+                    <li class="service-card">
+                        <div class="service-card-image-border">
+                            <img class="service-card-image" width="32" height="31" src="./assets/img/feellikeastar.svg"
+                                alt="Service6">
+                        </div>
                         <span class="service-card-title">Feel Like A Star</span>
                         <span class="service-card-description">Quisque hendrerit purus dapibus, ornare nibh vitae,
-                        viverra nibh. Fusce vitae aliquam tellus.</span>
-                </li>
-            </ul>
+                            viverra nibh. Fusce vitae aliquam tellus.</span>
+                    </li>
+                </ul>
             </div>
         </section>
-        <section class="portfolio section">
+        <section id="portfolio" class="portfolio section">
             <div class="wrapper">
                 <div class="section-header">
                     <h2 class="section-title">Portfolio</h2>
@@ -103,7 +117,7 @@
                         lacinia odio sem nec elit.</p>
                 </div>
                 <div class="buttons">
-                    <button class="portfolio-buttons">All</button>
+                    <button class="portfolio-buttons portfolio-buttons-active">All</button>
                     <button class="portfolio-buttons">Web Design</button>
                     <button class="portfolio-buttons">Graphic Design</button>
                     <button class="portfolio-buttons">Artwork</button>
@@ -121,34 +135,35 @@
                     <li class="work-card">
                         <img class="work-image" src="./assets/img/work/work_04.jpg" alt="portfolio image4">
                     </li>
-                    <li class="work-card"> 
+                    <li class="work-card">
                         <img class="work-image" src="./assets/img/work/work_05.jpg" alt="portfolio image5">
                     </li>
                     <li class="work-card">
                         <img class="work-image" src="./assets/img/work/work_06.jpg" alt="portfolio image6">
-                     </li>
+                    </li>
                     <li class="work-card">
                         <img class="work-image" src="./assets/img/work/work_07.jpg" alt="portfolio image7">
                     </li>
                     <li class="work-card">
                         <img class="work-image" src="./assets/img/work/work_08.jpg" alt="portfolio image8">
                     </li>
-                    <li class="work-card"> 
-                        <img class="work-image" src="./assets/img/work/work_09.jpg" alt="portfolio image9"> 
+                    <li class="work-card">
+                        <img class="work-image" src="./assets/img/work/work_09.jpg" alt="portfolio image9">
                     </li>
                     <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_10.jpg" alt="portfolio image10">
+                        <img class="work-image" src="./assets/img/work/work_010.jpg" alt="portfolio image10">
                     </li>
                     <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_11.jpg" alt="portfolio image11">
+                        <img class="work-image" src="./assets/img/work/work_011.jpg" alt="portfolio image11">
                     </li>
                     <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_12.jpg" alt="portfolio image12"> 
+                        <img class="work-image" src="./assets/img/work/work_012.jpg" alt="portfolio image12">
                     </li>
+                    
                 </ul>
             </div>
         </section>
-        <section class="section-about">
+        <section id="about" class="section-about">
             <div class="wrapper">
                 <div class="section-header">
                     <h2 class="section-title">About Us</h2>
@@ -220,7 +235,7 @@
                 </ul>
             </div>
         </section>
-        <div class="quote">
+        <div id="contact" class="quote">
             <div class="quote-title">
                 <h2>Get a Quote</h2>
                 <p class="quote-description">
@@ -229,20 +244,23 @@
                     tortor mauris condimentum nibh.
                 </p>
                 <div class="quote-field">
-                    <form class="quote-form">
-                        <p><input type="text" name="name" pattern="^[ A-Za-z]{3,}" placeholder="Name(Required)" required />
+                    <form action="#" class="quote-form" id="form" onsubmit="submitInput()">
+                        <p><input class="input" type="text" name="name" placeholder="Name(Required)" required />
                         </p>
-                        <p><input type="email" name="email" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Email(Required)" required />
+                        <p><input class="input" type="email" name="email" placeholder="Email(Required)" required />
                         </p>
-                        <p><input type="text" name="subject" placeholder="Subject">
+                        <p><input class="input" type="text" name="subject" placeholder="Subject" id="subject-input">
                         </p>
-                        <textarea rows="13" name="descritrion" placeholder="Describe your project in detail..."></textarea>
-                        <input class="submit-button" type="submit" name="submit" value="Submit">
-                     </form>
+                        <textarea class="input" rows="13" id="textarea" name="descritrion"
+                            placeholder="Describe your project in detail..."></textarea>
+                        <input class="submit-button" type="submit" name="submit" value="Submit" id="submit-btn">
+                    </form>
                     <div class="contact-title">
                         <h3>Contact Information</h3>
                         <p class="contact-description">
-                            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+                            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam
+                            tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
+                            aliquet turpis, et consequat felis.
                         </p>
                         <ul>
                             <li>
@@ -286,5 +304,7 @@
             </ul>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>
