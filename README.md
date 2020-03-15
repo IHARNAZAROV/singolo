@@ -4,7 +4,7 @@
 
 ### Pixel Perfect вёрстка
 ### Ссылка на деплой проекта [Netlify deploy](https://singolo-nazarov-rsschool.netlify.com)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/45da62b5-f6e2-413e-a32d-752a10c8d119/deploy-status)](https://app.netlify.com/sites/singolo-nazarov-rsschool/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a6fbda56-c31c-48ac-a6fe-becd1f895117/deploy-status)](https://app.netlify.com/sites/singolo-nazarov-rsschool/deploys)
 
 
 ### Ссылки на задания 
