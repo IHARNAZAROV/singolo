@@ -146,7 +146,7 @@ nextArrow.addEventListener("click", function () {
 });
 
 /*Get the button Gotop */
-let mybutton = document.getElementById("myBtn");
+let scrollButton = document.getElementById("scrollButton");
 
 /* When the user scrolls down 20px from the top of the document, show the button */
 window.onscroll = function () {
@@ -155,9 +155,9 @@ window.onscroll = function () {
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+    scrollButton.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    scrollButton.style.display = "none";
   }
 }
 
@@ -175,7 +175,7 @@ function modalWindow() {
   let email = document.getElementById("email").value;
   let subject = document.getElementById("subject-input").value;
   let description = document.getElementById("textarea").value;
-  let text = '<h1>Письмо отправлено</h1><br><b>Имя : </b>' + (name || 'Без имени') + '<br><b>Почта : </b>' + (email || 'Без емейла') + '<br><b>Тема : </b>' + (subject || 'Без темы') + '<br><b>Описание : </b>' + (description || 'Без описания');
+  let text = `<h1>Письмо отправлено</h1><br><b>Имя : </b>${name || 'Без имени'}<br><b>Почта : </b>${email || 'Без емейла'}<br><b>Тема : </b>${subject || 'Без темы'}<br><b>Описание : </b>${description || 'Без описания'}`;
   document.getElementById('result').innerHTML = text;
 }
 
