@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./assets/favicon-32x32.png" />
     <title>Singolo</title>
 </head>
@@ -246,17 +247,25 @@
                     tortor mauris condimentum nibh.
                 </p>
                 <div class="quote-field">
-                    <form action="#" class="quote-form" id="form" onsubmit="submitInput()">
-                        <p><input class="input" type="text" name="name" placeholder="Name(Required)" required />
+                    <form action="#" class="quote-form" id="form">
+                        <p><input class="input" type="text" id="name" name="name" placeholder="Name(Required)"
+                                required />
                         </p>
-                        <p><input class="input" type="email" name="email" placeholder="Email(Required)" required />
+                        <p><input class="input" type="email" id="email" name="email" placeholder="Email(Required)"
+                                required />
                         </p>
                         <p><input class="input" type="text" name="subject" placeholder="Subject" id="subject-input">
                         </p>
                         <textarea class="input" rows="13" id="textarea" name="descritrion"
                             placeholder="Describe your project in detail..."></textarea>
-                        <input class="submit-button" type="submit" name="submit" value="Submit" id="submit-btn">
+                        <input class="submit-button" type="submit" name="submit" value="Submit" id="submit-button">
                     </form>
+                    <div id="modal-window" class="modal-window">
+                        <div class="modal-content">
+                            <span class="close">OK</span>
+                            <div id="result"></div>
+                        </div>
+                    </div>
                     <div class="contact-title">
                         <h3>Contact Information</h3>
                         <p class="contact-description">

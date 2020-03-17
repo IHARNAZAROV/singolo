@@ -26,7 +26,7 @@ function reorder(array) {
   let k = 0;
   let j;
   while (i -= 1) {
-    k = Math.floor(Math.random() * (i + 1));
+    k = Math.floor(Math.random() * (i + 2));
     j = array[i];
     array[i] = array[k];
     array[k] = j;
@@ -81,18 +81,6 @@ for (let elem of phones) {
   });
 };
 
-/* Submit */
-
-function submitInput() {
-  let theme = document.querySelectorAll('.input')[2].value ? `Тема: ${document.querySelectorAll('.input')[2].value}` : 'Без темы';
-  let description = document.querySelectorAll('.input')[3].value ? `Описание: ${document.querySelectorAll('.input')[3].value}` : 'Без описания';
-  let alertmessage = `Письмо отправлено
-  ${theme}
-  ${description}
-  `;
-  alert(alertmessage);
-}
-
 /* Smooth scrolling to anchor*/
 
 let anchors = document.querySelectorAll('a[href*="#"]')
@@ -100,9 +88,9 @@ let anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
-    
+
     let blockID = anchor.getAttribute('href').substr(1)
-    
+
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -118,7 +106,7 @@ let slides = slider.querySelectorAll(".slide");
 function sliderReset() {
   let index = 0;
   slides.forEach((temp, tempindex) => {
-    if(temp.classList.contains("slide-active")) {
+    if (temp.classList.contains("slide-active")) {
       index = tempindex;
       temp.classList.remove("slide-active");
     }
@@ -130,6 +118,7 @@ function sliderReset() {
 function changeSlides(Number) {
   slider.classList.toggle("slider-first", Number === 0);
   slider.classList.toggle("slider-second", Number === 1);
+  slider.style.transition = "transform 5s ease-in-out";
 }
 
 function nextSlide() {
@@ -140,7 +129,7 @@ function nextSlide() {
 
 function prevSlide() {
   let index = sliderReset() - 1;
-  if(index < 0) index = slides.length - 1;
+  if (index < 0) index = slides.length - 1;
   slides[index].classList.add("slide-active");
   changeSlides(index);
 }
@@ -177,3 +166,35 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+/* Modal */
+
+function modalWindow() {
+  event.preventDefault();
+  let name = document.getElementById("name").value;
+  let email = document.getElementById("email").value;
+  let subject = document.getElementById("subject-input").value;
+  let description = document.getElementById("textarea").value;
+  let text = '<h1>Письмо отправлено</h1><br><b>Имя : </b>' + (name || 'Без имени') + '<br><b>Почта : </b>' + (email || 'Без емейла') + '<br><b>Тема : </b>' + (subject || 'Без темы') + '<br><b>Описание : </b>' + (description || 'Без описания');
+  document.getElementById('result').innerHTML = text;
+}
+
+document.getElementById("submit-button").addEventListener("click", modalWindow);
+
+let modal = document.getElementById("modal-window");
+let submitButton = document.getElementById("submit-button");
+let closeButton = document.getElementsByClassName("close")[0];
+
+submitButton.addEventListener("click", function () {
+  modal.style.display = "block";
+})
+
+closeButton.addEventListener("click", function () {
+  modal.style.display = "none";
+})
+
+window.addEventListener("click", function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+})
