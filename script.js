@@ -74,7 +74,7 @@ function borderOff(event) {
 
 /*Switch display iphones*/
 
-let phones = document.querySelectorAll('.phone');
+let phones = document.querySelectorAll(".phone");
 for (let elem of phones) {
   elem.addEventListener("click", function () {
     elem.classList.toggle("display-switch");
@@ -86,10 +86,10 @@ for (let elem of phones) {
 let anchors = document.querySelectorAll('a[href*="#"]')
 
 for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
+  anchor.addEventListener("click", function (e) {
     e.preventDefault()
 
-    let blockID = anchor.getAttribute('href').substr(1)
+    let blockID = anchor.getAttribute("href").substr(1)
 
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
@@ -175,8 +175,8 @@ function modalWindow() {
   let email = document.getElementById("email").value;
   let subject = document.getElementById("subject-input").value;
   let description = document.getElementById("textarea").value;
-  let text = `<h1>Письмо отправлено</h1><br><b>Имя : </b>${name || 'Без имени'}<br><b>Почта : </b>${email || 'Без емейла'}<br><b>Тема : </b>${subject || 'Без темы'}<br><b>Описание : </b>${description || 'Без описания'}`;
-  document.getElementById('result').innerHTML = text;
+  let text = `<h1>Письмо отправлено</h1><br><b>Имя : </b>${name || 'Без имени'}<br><b>Почта : </b>${email || 'Без почты'}<br><b>Тема : </b>${subject || 'Без темы'}<br><b>Описание : </b>${description || 'Без описания'}`;
+  document.getElementById("result").innerHTML = text;
 }
 
 document.getElementById("submit-button").addEventListener("click", modalWindow);
@@ -194,7 +194,7 @@ closeButton.addEventListener("click", function () {
 })
 
 window.addEventListener("click", function (event) {
-  if (event.target == modal) {
+  if (event.target === modal) {
     modal.style.display = "none";
   }
 })
