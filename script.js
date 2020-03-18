@@ -121,17 +121,75 @@ function changeSlides(Number) {
   slider.style.transition = "transform 5s ease-in-out";
 }
 
+
 function nextSlide() {
-  let index = (sliderReset() + 1) % slides.length;
-  slides[index].classList.add("slide-active");
-  changeSlides(index);
+
+  let prevIndex = sliderReset();
+  let nextIndex = (prevIndex + 1) % slides.length;
+
+  slides[nextIndex].animate([{
+      transform: 'translate(-100%)'
+    },
+    {
+      transform: 'translate(0)'
+    },
+    {
+      transform: 'rotate(180deg)'
+    }
+  ], {
+    duration: 500
+  });
+
+  slides[prevIndex].animate([{
+      transform: 'translate(0)'
+    },
+    {
+      transform: 'translate(100%)'
+    },
+    {
+      transform: 'rotate(180deg)'
+    }
+  ], {
+    duration: 500,
+  });
+
+  slides[nextIndex].classList.add("slide-active");
+  changeSlides(nextIndex);
 }
 
 function prevSlide() {
-  let index = sliderReset() - 1;
-  if (index < 0) index = slides.length - 1;
-  slides[index].classList.add("slide-active");
-  changeSlides(index);
+  let prevIndex = sliderReset()
+  let nextIndex = prevIndex - 1;
+  if (nextIndex < 0) nextIndex = slides.length - 1;
+
+  slides[nextIndex].animate([{
+      transform: 'translate(100%)'
+    },
+    {
+      transform: 'translate(0)'
+    },
+    {
+      transform: 'rotate(180deg)'
+    }
+  ], {
+    duration: 500
+  });
+
+  slides[prevIndex].animate([{
+      transform: 'translate(0)'
+    },
+    {
+      transform: 'translate(-100%)'
+    },
+    {
+      transform: 'rotate(180deg)'
+    }
+  ], {
+    duration: 500
+  });
+
+  slides[nextIndex].classList.add('slide-active');
+  changeSlides(nextIndex);
 }
 
 let prevArrow = document.querySelector(".arrow-left");
@@ -171,6 +229,7 @@ function topFunction() {
 
 function modalWindow() {
   event.preventDefault();
+
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let subject = document.getElementById("subject-input").value;
@@ -191,6 +250,8 @@ submitButton.addEventListener("click", function () {
 
 closeButton.addEventListener("click", function () {
   modal.style.display = "none";
+  let form = document.querySelector('form');
+  form.reset();
 })
 
 window.addEventListener("click", function (event) {
