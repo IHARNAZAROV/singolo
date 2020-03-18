@@ -20,7 +20,7 @@
 
 ### Ссылка на деплой проекта [Netlify deploy](https://singolo-dom-nazarov.netlify.com/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/65578d5d-aef1-4f94-ac0c-ca99da86f05e/deploy-status)](https://app.netlify.com/sites/singolo-dom-nazarov/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01f1643b-7d3a-46aa-880f-d1a3532b1c7a/deploy-status)](https://app.netlify.com/sites/singolo-dom-nazarov/deploys)
 
 ### Ссылка на заданиe 
 [Link Singolo DOM](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-2/singolo/singolo-DOM-ru.md)
