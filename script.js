@@ -137,7 +137,7 @@ function nextSlide() {
       transform: 'rotate(180deg)'
     }
   ], {
-    duration: 500
+    duration: 700
   });
 
   slides[prevIndex].animate([{
@@ -150,7 +150,7 @@ function nextSlide() {
       transform: 'rotate(180deg)'
     }
   ], {
-    duration: 500,
+    duration: 700,
   });
 
   slides[nextIndex].classList.add("slide-active");
@@ -172,7 +172,7 @@ function prevSlide() {
       transform: 'rotate(180deg)'
     }
   ], {
-    duration: 500
+    duration: 700
   });
 
   slides[prevIndex].animate([{
@@ -185,7 +185,7 @@ function prevSlide() {
       transform: 'rotate(180deg)'
     }
   ], {
-    duration: 500
+    duration: 700
   });
 
   slides[nextIndex].classList.add('slide-active');
@@ -229,7 +229,6 @@ function topFunction() {
 
 function modalWindow() {
   event.preventDefault();
-
   let name = document.getElementById("name").value;
   let email = document.getElementById("email").value;
   let subject = document.getElementById("subject-input").value;
@@ -249,8 +248,8 @@ submitButton.addEventListener("click", function () {
 })
 
 closeButton.addEventListener("click", function () {
-  modal.style.display = "none";
   let form = document.querySelector('form');
+  modal.style.display = "none";
   form.reset();
 })
 
