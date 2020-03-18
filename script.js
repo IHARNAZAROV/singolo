@@ -1,3 +1,5 @@
+/* Navigation */
+
 /* Active tabs navigation */
 
 let navigationItem = document.querySelectorAll(".navigation-link");
@@ -5,12 +7,52 @@ for (let elem of navigationItem) {
   elem.addEventListener("click", navigationColor);
 }
 
-function navigationColor() {
+function navigationColor(event) {
   for (let elem of navigationItem) {
     elem.classList.remove("navigation-link-active");
   }
-  this.classList.toggle("navigation-link-active");
+  event.target.classList.toggle("navigation-link-active");
 }
+
+/* Smooth scrolling to anchor*/
+
+let anchors = document.querySelectorAll('a[href*="#"]')
+for (let anchor of anchors) {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault()
+    let blockID = anchor.getAttribute("href").substr(1)
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+}
+
+/*Get the button Gotop */
+let scrollButton = document.getElementById("scrollButton");
+
+/* When the user scrolls down 20px from the top of the document, show the button */
+window.onscroll = function () {
+  scrollFunction()
+};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollButton.style.display = "block";
+  } else {
+    scrollButton.style.display = "none";
+  }
+}
+
+/* When the user clicks on the button, scroll to the top of the document */
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+
+
+/* Portfolio images */
 
 /* Reorder images */
 
@@ -51,7 +93,7 @@ function portfolioButtons() {
   }
 }
 
-/* Work images border */
+/* Portfolio images border */
 
 for (elem of portfolioImages) {
   elem.addEventListener("click", borderOn);
@@ -70,32 +112,6 @@ function borderOff(event) {
   if (target.classList.contains("bordered")) {
     target.classList.remove("bordered");
   }
-}
-
-/*Switch display iphones*/
-
-let phones = document.querySelectorAll(".phone");
-for (let elem of phones) {
-  elem.addEventListener("click", function () {
-    elem.classList.toggle("display-switch");
-  });
-};
-
-/* Smooth scrolling to anchor*/
-
-let anchors = document.querySelectorAll('a[href*="#"]')
-
-for (let anchor of anchors) {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault()
-
-    let blockID = anchor.getAttribute("href").substr(1)
-
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
 }
 
 /* Slider */
@@ -203,27 +219,14 @@ nextArrow.addEventListener("click", function () {
   nextSlide();
 });
 
-/*Get the button Gotop */
-let scrollButton = document.getElementById("scrollButton");
+/*Switch display iphones*/
 
-/* When the user scrolls down 20px from the top of the document, show the button */
-window.onscroll = function () {
-  scrollFunction()
+let phones = document.querySelectorAll(".phone");
+for (let elem of phones) {
+  elem.addEventListener("click", function () {
+    elem.classList.toggle("display-switch");
+  });
 };
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollButton.style.display = "block";
-  } else {
-    scrollButton.style.display = "none";
-  }
-}
-
-/* When the user clicks on the button, scroll to the top of the document */
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
 
 /* Modal */
 
