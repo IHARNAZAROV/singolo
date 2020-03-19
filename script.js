@@ -28,29 +28,25 @@ for (let anchor of anchors) {
   })
 }
 
-/*Get the button Gotop */
-let scrollButton = document.getElementById("scrollButton");
+/* Active scroll */
 
-/* When the user scrolls down 20px from the top of the document, show the button */
-window.onscroll = function () {
-  scrollFunction()
-};
+document.addEventListener('scroll', onScroll);
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    scrollButton.style.display = "block";
-  } else {
-    scrollButton.style.display = "none";
-  }
+function onScroll(event) {
+  let currentPosition = window.scrollY + 95;
+  let sectionsNav = document.querySelectorAll('.anchor');
+  let links = document.querySelectorAll('.header-navigation > li > a');
+  sectionsNav.forEach((elem) => {
+    if ((elem.offsetTop) <= currentPosition && (elem.offsetTop) + elem.offsetHeight > currentPosition) {
+      links.forEach((a) => {
+        a.classList.remove('navigation-link-active');
+        if (elem.getAttribute('id') === a.getAttribute('href').substring(1)) {
+          a.classList.add('navigation-link-active');
+        }
+      })
+    }
+  })
 }
-
-/* When the user clicks on the button, scroll to the top of the document */
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-
 
 /* Portfolio images */
 
