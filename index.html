@@ -11,13 +11,12 @@
 </head>
 
 <body>
-    <div id="home"></div>
-    <header class="header anchor" >
+    <header id="header" class="header anchor" >
         <div class="wrapper">
             <a class="header-logo logo" href="">Singolo</a>
             <nav class="page-header_navigation">
                 <ul id="header-navigation" class="header-navigation">
-                    <li class="navigation-item"><a class="navigation-link navigation-link-active" href="#home">Home</a>
+                    <li class="navigation-item navigation-link-active"><a class="navigation-link " href="#home">Home</a>
                     </li>
                     <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
                     <li class="navigation-item"><a class="navigation-link" href="#portfolio">Portfolio</a></li>
@@ -28,7 +27,7 @@
         </div>
     </header>
     <main class="main-section">
-         <section class="slider slider-first">
+         <section id="home" class="slider slider-first">
             <div class="wrapper">
                 <button type="button" class="slider-arrow arrow-left"></button>
                 <div class="slide slide-active">
@@ -235,7 +234,8 @@
                 </ul>
             </div>
         </section>
-        <div id="contact" class="quote anchor">
+        <section id="contact">
+        <div class="quote anchor">
             <div class="quote-title">
                 <h2>Get a Quote</h2>
                 <p class="quote-description">
@@ -293,6 +293,7 @@
                 </div>
             </div>
         </div>
+    </section>
     </main>
     <footer>
         <div class="footer">

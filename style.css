@@ -84,10 +84,11 @@ body {
     height: 1.875rem;
     margin-left: 1.75rem;
     margin-top: 1.125rem;
+    color: #f06c64 !important;
 }
 
-.navigation-link-active {
-    color: #f06c64 !important;
+.header-navigation .navigation-item.navigation-link-active a {
+    color: #f06c64;
 }
 
 .navigation-item a {
@@ -203,9 +204,12 @@ body {
 #portfolio,
 #services,
 #about,
-#home,
 #contact {
     scroll-margin-top: 2.5rem;
+}
+
+#home {
+    scroll-margin-top: 95px;
 }
 
 .services-title {
@@ -793,4 +797,3 @@ footer {
         opacity: 1
     }
 }
-

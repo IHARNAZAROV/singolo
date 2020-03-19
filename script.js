@@ -1,50 +1,44 @@
 /* Navigation */
 
 /* Active tabs navigation */
+let navigationSections = document.querySelectorAll('section');
+let navigation = document.getElementById('header-navigation');
+let navigationItem = navigation.querySelectorAll('li');
 
-let navigationItem = document.querySelectorAll(".navigation-link");
-for (let elem of navigationItem) {
-  elem.addEventListener("click", navigationColor);
-}
+navigation.addEventListener('click', function (event) {
+  navigationItem.forEach(el => el.classList.remove('navigation-link-active'));
+  event.target.parentElement.classList.add('navigation-link-active');
+});
 
-function navigationColor(event) {
-  for (let elem of navigationItem) {
-    elem.classList.remove("navigation-link-active");
-  }
-  event.target.classList.toggle("navigation-link-active");
-}
+document.addEventListener('scroll', onScroll);
+let headerHeight = document.getElementById('header').clientHeight;
+
+function onScroll(event) {
+  let scrollPosition = window.scrollY + headerHeight;
+  let navigationLinks = document.querySelectorAll('#header-navigation a');
+  navigationSections.forEach(el => {
+    if(el.offsetTop <= scrollPosition && (el.offsetTop + el.offsetHeight) > scrollPosition) {
+      navigationLinks.forEach(link => {
+        link.parentElement.classList.remove('navigation-link-active');
+        if(el.getAttribute('id') === link.getAttribute('href').substring(1)) {
+          link.parentElement.classList.add('navigation-link-active');
+        }
+      })
+    }
+  })
+};
 
 /* Smooth scrolling to anchor*/
 
 let anchors = document.querySelectorAll('a[href*="#"]')
 for (let anchor of anchors) {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault()
+  anchor.addEventListener("click", function (event) {
+    event.preventDefault()
     let blockID = anchor.getAttribute("href").substr(1)
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })
-  })
-}
-
-/* Active scroll */
-
-document.addEventListener('scroll', onScroll);
-
-function onScroll(event) {
-  let currentPosition = window.scrollY + 95;
-  let sectionsNav = document.querySelectorAll('.anchor');
-  let links = document.querySelectorAll('.header-navigation > li > a');
-  sectionsNav.forEach((elem) => {
-    if ((elem.offsetTop) <= currentPosition && (elem.offsetTop) + elem.offsetHeight > currentPosition) {
-      links.forEach((a) => {
-        a.classList.remove('navigation-link-active');
-        if (elem.getAttribute('id') === a.getAttribute('href').substring(1)) {
-          a.classList.add('navigation-link-active');
-        }
-      })
-    }
   })
 }
 
