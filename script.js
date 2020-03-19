@@ -59,19 +59,6 @@ for (let elem of portfolioButton) {
   elem.addEventListener("click", portfolioButtons);
 }
 
-function reorder(array) {
-  let i = array.length;
-  let k = 0;
-  let j;
-  while (i -= 1) {
-    k = Math.floor(Math.random() * (i + 2));
-    j = array[i];
-    array[i] = array[k];
-    array[k] = j;
-  }
-  return array;
-}
-
 function portfolioButtons() {
   for (let elem of portfolioButton) {
     elem.classList.remove("portfolio-buttons-active");
@@ -82,9 +69,11 @@ function portfolioButtons() {
     elem.classList.remove("bordered");
   }
 
+
   document.querySelector('.portfolio-work').querySelectorAll('.work-card').forEach(element => {        
             element.style.order = Math.floor(1 + Math.random() * 12);        
-     });
+         });
+}
 
 /* Portfolio images border */
 
