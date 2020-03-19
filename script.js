@@ -82,12 +82,9 @@ function portfolioButtons() {
     elem.classList.remove("bordered");
   }
 
-  let number = reorder([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
-  let length = number.length;
-  for (let i = 0; i < length; i += 1) {
-    portfolioImages[i].src = `assets/img/work/work_0${number[i]}.jpg`;
-  }
-}
+  document.querySelector('.portfolio-work').querySelectorAll('.work-card').forEach(element => {        
+            element.style.order = Math.floor(1 + Math.random() * 12);        
+     });
 
 /* Portfolio images border */
 

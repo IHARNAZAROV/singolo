@@ -88,7 +88,6 @@ body {
 
 .navigation-link-active {
     color: #f06c64 !important;
-    transition: .5s;
 }
 
 .navigation-item a {
