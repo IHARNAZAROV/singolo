@@ -63,10 +63,7 @@ function portfolioButtons() {
     elem.classList.remove("bordered");
   }
 
-
-  document.querySelector('.portfolio-work').querySelectorAll('.work-card').forEach(element => {        
-            element.style.order = Math.floor(1 + Math.random() * 12);        
-         });
+  document.querySelector('.portfolio-work').querySelectorAll('.work-card').forEach(element => {element.style.order = Math.floor(1 + Math.random() * 12);});
 }
 
 /* Portfolio images border */
@@ -103,7 +100,6 @@ function sliderReset() {
       temp.classList.remove("slide-active");
     }
   });
-
   return index;
 }
 
@@ -112,7 +108,6 @@ function changeSlides(Number) {
   slider.classList.toggle("slider-second", Number === 1);
   slider.style.transition = "transform 5s ease-in-out";
 }
-
 
 function nextSlide() {
 
@@ -194,6 +189,23 @@ prevArrow.addEventListener("click", function () {
 nextArrow.addEventListener("click", function () {
   nextSlide();
 });
+
+/*Control keyboard*/
+
+document.onkeydown = function(event) {
+  switch (event.keyCode) {
+      case 37:
+          //left
+          event.preventDefault();
+          prevSlide();
+          break;
+      case 39:
+          //right
+          event.preventDefault();
+          nextSlide();
+          break;
+  }
+}
 
 /*Switch display iphones*/
 

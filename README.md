@@ -16,11 +16,11 @@
 
 ## 2. Имя проекта - Singolo. DOM
 ## Крайний срок сдачи - 21.03.2020 23:59
-## Дата выполнения - 19.03.2020
+## Дата выполнения - 20.03.2020
 
 ### Ссылка на деплой проекта [Netlify deploy](https://singolo-dom-nazarov.netlify.com/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/501b5b52-6149-4de1-b1dd-498aa39d1d91/deploy-status)](https://app.netlify.com/sites/singolo-dom-nazarov/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d6382896-419b-44c5-ae3d-6135961aeda4/deploy-status)](https://app.netlify.com/sites/singolo-dom-nazarov/deploys)
 
 ### Ссылка на заданиe 
 [Link Singolo DOM](https://github.com/rolling-scopes-school/tasks/blob/master/tasks/markups/level-2/singolo/singolo-DOM-ru.md)

@@ -84,7 +84,7 @@ body {
     height: 1.875rem;
     margin-left: 1.75rem;
     margin-top: 1.125rem;
-    color: #f06c64 !important;
+
 }
 
 .header-navigation .navigation-item.navigation-link-active a {
@@ -181,7 +181,7 @@ body {
 
 .slider-arrow:hover {
     opacity: 0.8;
-}
+} 
 
 .arrow-right {
     transform: rotate(180deg);
@@ -318,7 +318,7 @@ body {
 
 .portfolio-buttons {
     color: #767e9e;
-    border: 1px solid #666d89;
+    border: 2px solid #666d89;
     border-radius: 5px;
     background-color: transparent;
     margin-right: 0.6875rem;
@@ -336,7 +336,7 @@ body {
 
 .portfolio-buttons-active {
     color: #d6b87c;
-    border: 1px solid #f06c64;
+    border: 2px solid #f06c64;
 }
 
 .portfolio-work {
