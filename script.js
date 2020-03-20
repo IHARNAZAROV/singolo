@@ -17,10 +17,10 @@ function onScroll(event) {
   let scrollPosition = window.scrollY + headerHeight;
   let navigationLinks = document.querySelectorAll('#header-navigation a');
   navigationSections.forEach(el => {
-    if(el.offsetTop <= scrollPosition && (el.offsetTop + el.offsetHeight) > scrollPosition) {
+    if (el.offsetTop <= scrollPosition && (el.offsetTop + el.offsetHeight) > scrollPosition) {
       navigationLinks.forEach(link => {
         link.parentElement.classList.remove('navigation-link-active');
-        if(el.getAttribute('id') === link.getAttribute('href').substring(1)) {
+        if (el.getAttribute('id') === link.getAttribute('href').substring(1)) {
           link.parentElement.classList.add('navigation-link-active');
         }
       })
@@ -41,6 +41,36 @@ for (let anchor of anchors) {
     })
   })
 }
+
+/* Top Scroll */
+
+let basicScrollTop = function () {
+  // The button
+  let buttonTop = document.querySelector('#goTop');
+  // Reveal the button
+  let buttonReveal = function () {
+    if (window.scrollY >= 300) {
+      buttonTop.classList.add('is-visible');
+    } else {
+      buttonTop.classList.remove('is-visible');
+    }
+  }
+  // Smooth scroll top
+  let TopscrollTo = function () {
+    if (window.scrollY != 0) {
+      setTimeout(function () {
+        window.scrollTo(0, window.scrollY - 30);
+        TopscrollTo();
+      }, 5);
+    }
+  }
+  // Listeners
+  window.addEventListener('scroll', buttonReveal);
+  buttonTop.addEventListener('click', TopscrollTo);
+
+};
+basicScrollTop();
+
 
 /* Portfolio images */
 
@@ -63,7 +93,9 @@ function portfolioButtons() {
     elem.classList.remove("bordered");
   }
 
-  document.querySelector('.portfolio-work').querySelectorAll('.work-card').forEach(element => {element.style.order = Math.floor(1 + Math.random() * 12);});
+  document.querySelector('.portfolio-work').querySelectorAll('.work-card').forEach(element => {
+    element.style.order = Math.floor(1 + Math.random() * 12);
+  });
 }
 
 /* Portfolio images border */
@@ -192,18 +224,18 @@ nextArrow.addEventListener("click", function () {
 
 /*Control keyboard*/
 
-document.onkeydown = function(event) {
+document.onkeydown = function (event) {
   switch (event.keyCode) {
-      case 37:
-          //left
-          event.preventDefault();
-          prevSlide();
-          break;
-      case 39:
-          //right
-          event.preventDefault();
-          nextSlide();
-          break;
+    case 37:
+      //left
+      event.preventDefault();
+      prevSlide();
+      break;
+    case 39:
+      //right
+      event.preventDefault();
+      nextSlide();
+      break;
   }
 }
 
