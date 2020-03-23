@@ -858,6 +858,14 @@ footer {
     opacity: 1;
 }
 
+.mobile__mobile-menu-overlay {
+    display: none;
+}
+
+.burger-default-container {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
 
     body {
@@ -1015,7 +1023,7 @@ footer {
         margin-bottom: 39px;
     }
 
-    .staff {
+    .agents {
         position: relative;
         right: -2px;
     }
@@ -1129,4 +1137,5 @@ footer {
     .copyright {
         display: none;
     }
+
 }
