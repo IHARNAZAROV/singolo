@@ -1,6 +1,7 @@
 /* Navigation */
 
 /* Active tabs navigation */
+
 let navigationSections = document.querySelectorAll('section');
 let navigation = document.getElementById('header-navigation');
 let navigationItem = navigation.querySelectorAll('li');
@@ -281,5 +282,3 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 })
-
-

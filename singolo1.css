@@ -18,8 +18,10 @@
     src: url("./assets/fonts/Lato-Black.ttf");
 }
 
+
 * {
     margin: 0;
+    max-width: 100%;
 }
 
 body {
@@ -27,10 +29,10 @@ body {
 }
 
 .wrapper {
-    max-width: 1020px;
+    width: 940px;
     padding: 0 40px;
     margin: 0 auto;
-    box-sizing: border-box;
+    height: 100%;
 }
 
 .header {
