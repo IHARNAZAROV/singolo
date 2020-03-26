@@ -12,11 +12,16 @@
 
 <body>
     <header id="header" class="header anchor">
+ 
         <div class="wrapper">
-            <a class="header-logo logo" href="">Singolo</a>
+            <div class="blackblock"></div>
+            <div class="header-burger">
+                <img src="./assets/img-responsive/burger-menu.png" alt="Menu">
+            </div>
+            <a href="#" class="header-logo logo">Singolo</a>
             <nav class="page-header_navigation">
                 <ul id="header-navigation" class="header-navigation">
-                    <li class="navigation-item navigation-link-active"><a class="navigation-link " href="#home">Home</a>
+                    <li class="navigation-item navigation-link-active"><a class="navigation-link" href="#home">Home</a>
                     </li>
                     <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
                     <li class="navigation-item"><a class="navigation-link" href="#portfolio">Portfolio</a></li>
@@ -24,9 +29,25 @@
                     <li class="navigation-item"><a class="navigation-link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <nav class="header-navigation-mobile">
+                <div class="header-logo-mobile">
+                    <h1><a href="#">Singolo<span class="header-logo-star">*</span></a></h1>
+                </div>
+                <ul class="header-navigation-mobile-menu">
+                    <li clas="navigation-item navigation-link-active"><a class="navigation-link" href="#home">Home</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#portfolio">Portfolio</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#about">About</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+          </div> 
     </header>
     <main class="main-section">
+   
         <section id="home" class="slider slider-first">
             <div class="wrapper">
                 <button type="button" class="slider-arrow arrow-left"></button>
@@ -278,6 +299,7 @@
                 </div>
             </div>
         </section>
+
     </main>
     <footer>
         <div class="footer">
