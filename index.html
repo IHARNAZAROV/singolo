@@ -11,12 +11,17 @@
 </head>
 
 <body>
-    <header id="header" class="header anchor" >
+    <header id="header" class="header anchor">
+ 
         <div class="wrapper">
-            <a class="header-logo logo" href="">Singolo</a>
+            <div class="blackblock"></div>
+            <div class="header-burger">
+                <img src="./assets/img-responsive/burger-menu.png" alt="Menu">
+            </div>
+            <a href="#" class="header-logo logo">Singolo</a>
             <nav class="page-header_navigation">
                 <ul id="header-navigation" class="header-navigation">
-                    <li class="navigation-item navigation-link-active"><a class="navigation-link " href="#home">Home</a>
+                    <li class="navigation-item navigation-link-active"><a class="navigation-link" href="#home">Home</a>
                     </li>
                     <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
                     <li class="navigation-item"><a class="navigation-link" href="#portfolio">Portfolio</a></li>
@@ -24,10 +29,26 @@
                     <li class="navigation-item"><a class="navigation-link" href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <nav class="header-navigation-mobile">
+                <div class="header-logo-mobile">
+                    <h1><a href="#">Singolo<span class="header-logo-star">*</span></a></h1>
+                </div>
+                <ul class="header-navigation-mobile-menu">
+                    <li clas="navigation-item navigation-link-active"><a class="navigation-link" href="#home">Home</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#services">Services</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#portfolio">Portfolio</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#about">About</a></li>
+                    <li class="navigation-item"><a class="navigation-link" href="#contact">Contact</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+          </div> 
     </header>
     <main class="main-section">
-         <section id="home" class="slider slider-first">
+   
+        <section id="home" class="slider slider-first">
             <div class="wrapper">
                 <button type="button" class="slider-arrow arrow-left"></button>
                 <div class="slide slide-active">
@@ -44,214 +65,219 @@
                 <button type="button" class="slider-arrow arrow-right"></button>
             </div>
         </section>
-        <section id="services" class="services anchor">
+        <section id="services" class="services">
+            <a name="services" class="anchor"></a>
             <div class="wrapper">
-                <h2 class="services-title">Our Services</h2>
+                <h2>Our Services</h2>
                 <p class="services-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
-                    mollis, non commodo luctus, nici erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
-                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh. </p>
-                <ul class="service-cards">
-                    <li class="service-card">
-                        <div class="service-card-image-border">
-                            <img class="service-card-image" width="32" height="32" src="./assets/img/customdesign.svg"
-                                alt="Service1">
+                    molis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh</p>
+                <div class="services-cards">
+                    <div class="services-item">
+                        <img src="./assets/img/customdesign.png" alt="Service1" class="service-card-image" width="60"
+                            height="60" />
+                        <div class="services-item-content">
+                            <span class="services-item-title">Custom Design</span>
+                            <p class="services-item-description">Curabitur vestibulum eget mauris quis laoreet.
+                                Phasellus in quam laoreet, viverra lacus ut, ultrices velit</p>
                         </div>
-                        <span class="service-card-title">Custom Design</span>
-                        <span class="service-card-description">Curabitur vestibulum eget mauris quis laoreet. Phasellus
-                            in quam laoreet, viverra lacus ut, ultrices velit.</span>
-                    </li>
-                    <li class="service-card">
-                        <div class="service-card-image-border">
-                            <img class="service-card-image" width="22" height="32"
-                                src="./assets/img/innovativeideas.svg" alt="Service2">
+                    </div>
+                    <div class="services-item">
+                        <img src="./assets/img/innovativeideas.png" alt="Service2" class="service-card-image" width="60"
+                            height="60" />
+                        <div class="services-item-content">
+                            <span class="services-item-title">Inovative Ideas</span>
+                            <p class="services-item-description">Quisque luctus, quam eget molestie commodo, lacus purus
+                                cursus purus, nec rutrum tellus dolor id lorem.</p>
                         </div>
-                        <span class="service-card-title">Inovative Ideas</span>
-                        <span class="service-card-description">Quisque luctus, quam eget molestie commodo, lacus purus
-                            cursus purus, nec rutrum tellus dolor id lorem.</span>
-                    </li>
-                    <li class="service-card">
-                        <div class="service-card-image-border">
-                            <img class="service-card-image" width="32" height="28"
-                                src="./assets/img/loveistheanswer.svg" alt="Service3">
+                    </div>
+                    <div class="services-item">
+                        <img src="./assets/img/loveistheanswer.png" alt="Service3" class="service-card-image" width="60"
+                            height="60" />
+                        <div class="services-item-content">
+                            <span class="services-item-title">Love Is The Answer</span>
+                            <p class="services-item-description">Nulla sed nunc et tortor luctus faucibus. Morbi at
+                                aliquet turpis, et consequat felis. Quisque condimentum.</p>
                         </div>
-                        <span class="service-card-title">Love Is The Answer</span>
-                        <span class="service-card-description">Nulla sed nunc et tortor luctus faucibus. Morbi at
-                            aliquet turpis, et consequat felis. Quisque condimentum.</span>
-                    </li>
-                    <li class="service-card">
-                        <div class="service-card-image-border">
-                            <img class="service-card-image" width="22" height="32"
-                                src="./assets/img/responsivelayout.svg" alt="Service4">
+                    </div>
+                    <div class="services-item">
+                        <img src="./assets/img/responsivelayout.png" alt="Service4" class="service-card-image"
+                            width="60" height="60" />
+                        <div class="services-item-content">
+                            <span class="services-item-title">Responsive Layout</span>
+                            <p class="services-item-description">Sed porttitor placerat rhoncus. In at nunc tellus.
+                                Maecenas blandit nunc ligula. Praesent elit leo.</p>
                         </div>
-                        <span class="service-card-title">Responsive Layout</span>
-                        <span class="service-card-description">Sed porttitor placerat rhoncus. In at nunc tellus.
-                            Maecenas blandit nunc ligula. Praecent elit leo.</span>
-                    </li>
-                    <li class="service-card">
-                        <div class="service-card-image-border">
-                            <img class="service-card-image" width="32" height="28" src="./assets/img/247support.svg"
-                                alt="Service5">
+                    </div>
+                    <div class="services-item">
+                        <img src="./assets/img/247support.png" alt="Service5" class="service-card-image" width="60"
+                            height="60" />
+                        <div class="services-item-content">
+                            <span class="services-item-title">24 / 7 Support</span>
+                            <p class="services-item-description">Vivamus vel quam lacinia, tincidunt dui non, vehicula
+                                nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</p>
                         </div>
-                        <span class="service-card-title">24 / 7 Support</span>
-                        <span class="service-card-description">Vivamus vel quam lacinia, tincidunt dui non, vehicula
-                            nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem.</span>
-                    </li>
-                    <li class="service-card">
-                        <div class="service-card-image-border">
-                            <img class="service-card-image" width="32" height="31" src="./assets/img/feellikeastar.svg"
-                                alt="Service6">
+                    </div>
+                    <div class="services-item">
+                        <img src="./assets/img/feellikeastar.png" alt="Service6" class="service-card-image" width="60"
+                            height="60" />
+                        <div class="services-item-content">
+                            <span class="services-item-title">Feel Like A Star</span>
+                            <p class="services-item-description">Quisque hendrerit purus dapibus, ornare nibh vitae,
+                                viverra nibh. Fusce vitae aliquam tellus.</p>
                         </div>
-                        <span class="service-card-title">Feel Like A Star</span>
-                        <span class="service-card-description">Quisque hendrerit purus dapibus, ornare nibh vitae,
-                            viverra nibh. Fusce vitae aliquam tellus.</span>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </section>
-        <section id="portfolio" class="portfolio section anchor">
+        <section id="portfolio" class="portfolio anchor">
+            <a name="portfolio" class="anchor"></a>
             <div class="wrapper">
-                <div class="section-header">
-                    <h2 class="section-title">Portfolio</h2>
-                    <p class="section-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
-                        lacinia odio sem nec elit.</p>
-                </div>
+                <h2 class="portfolio-title">Portfolio</h2>
+                <p class="portfolio-description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
+                    lacinia odio sem nec elit.</p>
                 <div id="portfolio-buttons" class="buttons">
                     <button class="portfolio-buttons portfolio-buttons-active">All</button>
                     <button class="portfolio-buttons">Web Design</button>
                     <button class="portfolio-buttons">Graphic Design</button>
                     <button class="portfolio-buttons">Artwork</button>
                 </div>
-                <ul class="portfolio-work">
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_01.jpg" alt="portfolio image1">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_02.jpg" alt="portfolio image2">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_03.jpg" alt="portfolio image3">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_04.jpg" alt="portfolio image4">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_05.jpg" alt="portfolio image5">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_06.jpg" alt="portfolio image6">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_07.jpg" alt="portfolio image7">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_08.jpg" alt="portfolio image8">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_09.jpg" alt="portfolio image9">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_010.jpg" alt="portfolio image10">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_011.jpg" alt="portfolio image11">
-                    </li>
-                    <li class="work-card">
-                        <img class="work-image" src="./assets/img/work/work_012.jpg" alt="portfolio image12">
-                    </li>
-
-                </ul>
-            </div>
-        </section>
-        <section id="about" class="section-about anchor">
-            <div class="wrapper">
-                <div class="section-header">
-                    <h2 class="section-title">About Us</h2>
-                    <p class="section-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
-                        Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
-                        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <div class="portfolio-work-wrapper">
+                    <ul class="portfolio-work">
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_01.jpg" alt="portfolio image1" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_02.jpg" alt="portfolio image2" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_03.jpg" alt="portfolio image3" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_04.jpg" alt="portfolio image4" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_05.jpg" alt="portfolio image5" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_06.jpg" alt="portfolio image6" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_07.jpg" alt="portfolio image7" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_08.jpg" alt="portfolio image8" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_09.jpg" alt="portfolio image9" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_010.jpg" alt="portfolio image10" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_011.jpg" alt="portfolio image11" class="work-image">
+                        </li>
+                        <li class="work-card">
+                            <img src="./assets/img/work/work_012.jpg" alt="portfolio image12" class="work-image">
+                        </li>
+                    </ul>
                 </div>
-                <ul class="agent-list">
-                    <li class="agent-info">
-                        <img class="agent-photo" src="./assets/img/agent1.png" alt="Adam Jensen">
-                        <span class="agent-name">Adam Jensen</span>
-                        <span class="agent-description">Quisque luctus, quam eget molestie commodo, lacus
-                            purus cursus purus, nec rutrum tellus dolor id lorem.</span>
-                        <ul class="social-agents">
-                            <li>
-                                <a class="social-item facebook" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item google-plus" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item twitter" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item linkedin" href="#"></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="agent-info">
-                        <img class="agent-photo" src="./assets/img/agent2.png" alt="Desmond Miles">
-                        <span class="agent-name">Desmond Miles</span>
-                        <span class="agent-description">Curabitur vestibulum eget mauris quis laoreet.
-                            Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</span>
-                        <ul class="social-agents">
-                            <li>
-                                <a class="social-item facebook" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item google-plus" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item twitter" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item linkedin" href="#"></a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="agent-info">
-                        <img class="agent-photo" src="./assets/img/agent3.png" alt="Desmond Miles">
-                        <span class="agent-name">Scolara Visari</span>
-                        <span class="agent-description">Nulla sed nunc et tortor luctus faucibus. Morbi at
-                            aliquet turpis, et consequat felis. Quisque condimentum.</span>
-                        <ul class="social-agents">
-                            <li>
-                                <a class="social-item facebook" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item google-plus" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item twitter" href="#"></a>
-                            </li>
-                            <li>
-                                <a class="social-item linkedin" href="#"></a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
             </div>
         </section>
-        <section id="contact">
-        <div class="quote anchor">
-            <div class="quote-title">
-                <h2>Get a Quote</h2>
-                <p class="quote-description">
-                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
-                    nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
-                    tortor mauris condimentum nibh.
-                </p>
-                <div class="quote-field">
-                    <form action="#" class="quote-form" id="form">
-                        <p><input class="input" type="text" id="name" name="name" placeholder="Name(Required) " required>
-                        </p>
-                        <p><input class="input" type="email" id="email" name="email" placeholder="Email(Required)" required>
-                        </p>
-                        <p><input class="input" type="text" name="subject" placeholder="Subject" id="subject-input">
-                        </p>
-                        <textarea class="input" rows="13" id="textarea" name="descritrion"
+        <section id="about" class="about">
+            <a name="about" class="anchor"></a>
+            <div class="wrapper">
+                <h2 class="about-title">About Us</h2>
+                <p class="about-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <div class="agents">
+                    <div class="about-agents-container">
+                        <ul class="agent-list">
+                            <li class="agent-info">
+                                <img src="./assets/img/agent1.png" alt="person" class="agent-photo">
+                                <h3 class="agent-name">Adam Jensen</h3>
+                                <p class="agent-description">Quisque luctus, quam eget molestie commodo, lacus purus
+                                    cursus purus, nec rutrum tellus dolor id lorem.</p>
+                                <div class="social-agents">
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/facebook.png" alt="facebook" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/google+.png" alt="goole+" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/twitter.png" alt="twitter" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/linkedin.png" alt="linkedin" class="social-image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="agent-info">
+                                <img src="./assets/img/agent2.png" alt="person" class="agent-photo">
+                                <h3 class="agent-name">Desmond Miles</h3>
+                                <p class="agent-description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in
+                                    quam laoreet, viverra lacus ut, ultrices velit.</p>
+                                <div class="social-agents">
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/facebook.png" alt="facebook" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/google+.png" alt="goole+" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/twitter.png" alt="twitter" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/linkedin.png" alt="linkedin" class="social-image">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="agent-info">
+                                <img src="./assets/img/agent3.png" alt="person" class="agent-photo">
+                                <h3 class="agent-name">Scolara Visari</h3>
+                                <p class="agent-description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                                    turpis, et consequat felis. Quisque condimentum.</p>
+                                <div class="social-agents">
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/facebook.png" alt="facebook" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/google+.png" alt="goole+" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/twitter.png" alt="twitter" class="social-image">
+                                    </a>
+                                    <a href="#" class="social-item">
+                                        <img src="./assets/img/linkedin.png" alt="linkedin" class="social-image">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="quote">
+            <a name="contact" class="anchor"></a>
+            <div class="wrapper">
+                <a name="contact">
+                    <h2 class="quote-title">Get a Quote</h2>
+                </a>
+                <p class="quote-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
+                    mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+                <div class="quote-content">
+                    <form action="#" method="POST" class="quote-form" id="form">
+                        <input class="input text-field name-field" id="name" type="text" name="name"
+                            placeholder="Name (required)" required pattern="[a-zA-Z_]{3,12}" minlength="3"
+                            maxlength="12">
+                        <input id="email" class="input text-field email-field" type="email" name="email"
+                            placeholder="Email (required)" required pattern="([\w]+@{1}[a-z]{2,}[\.]{1}[a-z]{2,}){1}">
+                        <input id="subject-input" class="input text-field subject-field" type="text" name="subject"
+                            placeholder="Subject">
+                        <textarea id="textarea" name="details" cols="30" rows="10" class="input textarea-block"
                             placeholder="Describe your project in detail..."></textarea>
                         <input class="submit-button" type="submit" name="submit" value="submit" id="submit-button">
                     </form>
@@ -261,54 +287,36 @@
                             <div id="result"></div>
                         </div>
                     </div>
-                    <div class="contact-title">
-                        <h3>Contact Information</h3>
-                        <p class="contact-description">
-                            Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam
-                            tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at
-                            aliquet turpis, et consequat felis.
-                        </p>
-                        <ul>
-                            <li>
-                                <a class="contact-icon">
-                                    <img src="./assets/img/contact-location.png" alt="location" width="7" height="11">
-                                </a>
-                                <p class="contact-description">Elm St. 14/05 Lost City</p>
-                            </li>
-                            <li>
-                                <a class="contact-icon" href="tel:035283318635">
-                                    <img class="contact-description" src="./assets/img/contact-phone.png" alt="phone"
-                                        width="11" height="13">
-                                </a>
-                                <p class="contact-content">03528 331 86 35</p>
-                            </li>
-                            <li>
-                                <a class="contact-icon" href="mailto:info@singolo.com">
-                                    <img src="./assets/img/contact-mail.png" alt="mail" width="13" height="8">
-                                </a>
-                                <p class="contact-description">info@singolo.com</p>
-                            </li>
-                        </ul>
+                    <div class="contact-information">
+                        <h3 class="contact-title">Contact Information</h3>
+                        <p class="contact-description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                            Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus
+                            faucibus. Morbi at aliquet turpis, et consequat felis.</p>
+                        <span class="contact-element location">Elm St. 14/05 Lost City</span>
+                        <a class="contact-element tel" href="tel:03528 331 86 35">03528 331 86 35</a>
+                        <a class="contact-element email" href="mailto:info@singolo.com">info@singolo.com</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
     </main>
     <footer>
         <div class="footer">
-            <div class="copyright">&copy; Copyright 2013&bull; by PSDchat.com
+            <div class="wrapper">
+                <div class="copyright">&copy; Copyright 2013&bull; by PSDchat.com
+                </div>
+                <ul class="social-footer">
+                    <li class="social-items"><a href="#"><img src="./assets/img/facebook.svg" alt="facebook" width="14"
+                                height="14"></a></li>
+                    <li class="social-items"><a href="#"><img src="./assets/img/google-plus.svg" alt="google+"
+                                width="14" height="14"></a></li>
+                    <li class="social-items"><a href="#"><img src="./assets/img/twitter.svg" alt="twitter" width="14"
+                                height="14"></a></li>
+                    <li class="social-items"><a href="#"><img src="./assets/img/linkedin.svg" alt="linkedin" width="14"
+                                height="14"></a></li>
+                </ul>
             </div>
-            <ul class="social-footer">
-                <li class="social-items"><a href="#"><img src="./assets/img/facebook.svg" alt="facebook" width="14"
-                            height="14"></a></li>
-                <li class="social-items"><a href="#"><img src="./assets/img/google-plus.svg" alt="google+" width="14"
-                            height="14"></a></li>
-                <li class="social-items"><a href="#"><img src="./assets/img/twitter.svg" alt="twitter" width="14"
-                            height="14"></a></li>
-                <li class="social-items"><a href="#"><img src="./assets/img/linkedin.svg" alt="linkedin" width="14"
-                            height="14"></a></li>
-            </ul>
         </div>
     </footer>
     <button id="goTop">Go top</button>

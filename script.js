@@ -1,6 +1,7 @@
 /* Navigation */
 
 /* Active tabs navigation */
+
 let navigationSections = document.querySelectorAll('section');
 let navigation = document.getElementById('header-navigation');
 let navigationItem = navigation.querySelectorAll('li');
@@ -70,6 +71,56 @@ let basicScrollTop = function () {
 
 };
 basicScrollTop();
+
+
+/* Burger menu */
+
+let burgerHeader = document.querySelector('.header-burger');
+let burgerImage = document.querySelector('.header-burger img');
+let blackblock = document.querySelector('.blackblock');
+let navigationMobile = document.querySelector('.header-navigation-mobile');
+
+burgerHeader.addEventListener('click', function () {
+  burgerImage.classList.toggle('rotated');
+  toggleVisible(blackblock);
+  toggleVisible(navigationMobile);
+
+});
+
+blackblock.addEventListener('click', function () {
+  toggleVisible(blackblock);
+  toggleVisible(navigationMobile);
+  burgerImage.classList.toggle('rotated');
+});
+
+navigationMobile.addEventListener('click', function () {
+  toggleVisible(blackblock);
+  toggleVisible(navigationMobile);
+  burgerImage.classList.toggle('rotated');
+});
+
+
+function toggleVisible(elem) {
+  if (elem.style.display == 'block') {
+    elem.style.display = 'none';
+  } else {
+    elem.style.display = 'block';
+  }
+}
+
+
+/* Scroll Indicator */
+window.onscroll = function () {
+  progressIndicator()
+};
+
+function progressIndicator() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+
 
 
 /* Portfolio images */
@@ -281,3 +332,4 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 })
+
